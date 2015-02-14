@@ -7,11 +7,14 @@
     <artifactId>spring-data-jpa-specification</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
+
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.1.RELEASE</version>
+        <groupId>ro.esolutions</groupId>
+        <artifactId>spring-data-samples</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>ro.esolutions.Application</start-class>
