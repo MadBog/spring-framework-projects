@@ -18,7 +18,8 @@ import java.util.List;
 @ContextConfiguration(classes = CustomRepositoryConfig.class)
 public class UserRepositoryCustomTest {
 
-	@Autowired UserRepository userRepository;
+	@Autowired
+	private UserRepository userRepository;
 
 
 	@Test
