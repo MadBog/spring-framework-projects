@@ -41,7 +41,7 @@ public class UserRepositoryTest {
     @Test
     public void testFindByFirstName() {
         List<User> users = userRepository.findByFirstName("FIRST_NAME_1");
-        Assert.assertEquals(users.size(), 1);
+        Assert.assertEquals(users.size(), 2);
     }
 
     @Test
