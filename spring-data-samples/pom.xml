@@ -18,5 +18,6 @@
 	<modules>
         <module>spring-data-jpa-specification</module>
         <module>spring-data-features</module>
+        <module>spring-data-custom</module>
     </modules>
 </project>
