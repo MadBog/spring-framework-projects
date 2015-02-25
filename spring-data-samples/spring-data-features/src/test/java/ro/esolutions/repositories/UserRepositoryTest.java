@@ -69,4 +69,12 @@ public class UserRepositoryTest {
         Assert.assertEquals(5, users.size());
     }
 
+    @Test
+    public void testFindByNativeSQL(){
+        User user = userRepository.findByNativeSQL("USER_1");
+        System.out.println(user.getEmail());
+        Assert.assertNotNull(user);
+        Assert.assertEquals(user.isActive(),false);
+    }
+
 }

@@ -3,6 +3,7 @@ package ro.esolutions.repositories;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import ro.esolutions.entities.User;
@@ -13,7 +14,8 @@ import java.util.Optional;
 /**
  * Created by Bogdan Stoean on 14.02.2015.
  */
-@Repository public interface UserRepository extends CrudRepository<User, Long> {
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {
 
 	User getByUsername(String username);
 
@@ -28,4 +30,7 @@ import java.util.Optional;
 	List<User> findFirst5ByUsernameStartingWithOrderByEmailDesc(String username);
 
 	List<User> findTop5By();
+
+	@Query(value = "SELECT * FROM USER WHERE USERNAME = ?1", nativeQuery = true)
+	User findByNativeSQL(String username);
 }
