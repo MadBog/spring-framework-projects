@@ -20,6 +20,7 @@
         <module>spring-data-features</module>
         <module>spring-data-custom</module>
         <module>spring-data-procedures-support</module>
+        <module>spring-data-spel-expressions</module>
     </modules>
 
     <properties>
