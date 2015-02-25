@@ -8,4 +8,5 @@ insert into user(username, first_name, last_name, email, role, active) values ('
 insert into user(username, first_name, last_name, email, role, active) values ('USER_8', 'FIRST_NAME_3', 'LAST_NAME_8', 'EMAIL_8', 'ROLE_1', true)
 insert into user(username, first_name, last_name, email, role, active) values ('USER_9', 'FIRST_NAME_9', 'LAST_NAME_9', 'EMAIL_9', 'ROLE_1', true)
 insert into user(username, first_name, last_name, email, role, active) values ('USER_10', 'FIRST_NAME_10', 'LAST_NAME_10', 'EMAIL_10', 'ROLE_10', true)
+insert into user(username, first_name, last_name, email, role, active) values ('gigi', 'FIRST_NAME_10', 'LAST_NAME_10', 'EMAIL_10', 'ROLE_10', true)
 INSERT INTO person(user_id, address, city, county, country) VALUES (1,'address','city','county','country')

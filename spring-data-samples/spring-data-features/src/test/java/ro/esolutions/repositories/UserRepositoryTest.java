@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Slice;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 import ro.esolutions.Application;
 import ro.esolutions.entities.User;
 
@@ -75,6 +76,17 @@ public class UserRepositoryTest {
         System.out.println(user.getEmail());
         Assert.assertNotNull(user);
         Assert.assertEquals(user.isActive(),false);
+    }
+
+    @Test
+    public void testUpdateFirstName(){
+        userRepository.updateFirstName("GIGI MASINUTA", "gigi");
+
+        User user = userRepository.getByUsername("gigi");
+        Assert.assertNotNull(user);
+        Assert.assertEquals("GIGI MASINUTA",user.getFirstName());
+        System.out.println(user.getFirstName());
+
     }
 
 }
