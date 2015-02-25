@@ -1,6 +1,7 @@
 package ro.esolutions.specifications;
 
 import org.springframework.data.jpa.domain.Specification;
+import ro.esolutions.entities.Category;
 import ro.esolutions.entities.Product;
 
 /**
@@ -16,8 +17,8 @@ public class ProductSpecifications {
         return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("code").as(String.class), code);
     }
 
-    public static Specification<Product> categoryEquals(final String category) {
-        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("category").as(String.class), category);
+    public static Specification<Product> categoryEquals(final Category category) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("category.id").as(Long.class), category.getId());
     }
 
     public static Specification<Product> acquisitionPriceEquals(final Double acquisitionPrice) {

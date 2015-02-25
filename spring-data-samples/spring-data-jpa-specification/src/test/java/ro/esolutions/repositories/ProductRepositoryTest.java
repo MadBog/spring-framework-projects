@@ -9,6 +9,7 @@ import org.springframework.data.jpa.domain.Specifications;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import ro.esolutions.Application;
 import ro.esolutions.entities.Product;
+import ro.esolutions.specifications.GenericSpecifications;
 import ro.esolutions.specifications.ProductSpecifications;
 
 import java.util.List;
@@ -73,4 +74,11 @@ public class ProductRepositoryTest {
         System.out.println(products.size());
         Assert.assertEquals(products.size(), 14);
     }
+
+	@Test
+	public void testGenericLike(){
+		List<Product> products = productRepository.findAll(GenericSpecifications.like("description","DESC"));
+		System.out.println(products.size());
+		Assert.assertEquals(products.size(), 14);
+	}
 }
