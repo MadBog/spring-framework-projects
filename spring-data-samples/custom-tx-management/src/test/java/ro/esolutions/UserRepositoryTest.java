@@ -5,7 +5,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import ro.esolutions.entities.User;
 import ro.esolutions.repositories.UserRepository;
 
@@ -16,7 +15,6 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = CustomTransactionManagement.class)
-@EnableTransactionManagement
 public class UserRepositoryTest {
 
 	@Autowired

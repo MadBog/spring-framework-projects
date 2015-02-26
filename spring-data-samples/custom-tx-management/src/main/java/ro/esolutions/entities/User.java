@@ -4,11 +4,13 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by Bogdan Stoean on 14.02.2015.
  */
 @Entity
+@Table(name = "USERS")
 public class User extends AbstractPersistable<Long> {
 
 
