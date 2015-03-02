@@ -14,13 +14,11 @@ public class Person extends AbstractPersistable<Long> {
 	@ManyToOne
 	private User user;
 
-	private String address;
+	@ManyToOne
+	private Address address;
 
-	private String city;
+	private String addressZip;
 
-	private String county;
-
-	private String country;
 
 	public User getUser() {
 		return user;
@@ -30,35 +28,19 @@ public class Person extends AbstractPersistable<Long> {
 		this.user = user;
 	}
 
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
-	public String getCity() {
-		return city;
+	public String getAddressZip() {
+		return addressZip;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getCounty() {
-		return county;
-	}
-
-	public void setCounty(String county) {
-		this.county = county;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
+	public void setAddressZip(String addressZip) {
+		this.addressZip = addressZip;
 	}
 }

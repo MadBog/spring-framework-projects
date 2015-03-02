@@ -9,4 +9,11 @@ insert into user(username, first_name, last_name, email, role, active) values ('
 insert into user(username, first_name, last_name, email, role, active) values ('USER_9', 'FIRST_NAME_9', 'LAST_NAME_9', 'EMAIL_9', 'ROLE_1', true)
 insert into user(username, first_name, last_name, email, role, active) values ('USER_10', 'FIRST_NAME_10', 'LAST_NAME_10', 'EMAIL_10', 'ROLE_10', true)
 insert into user(username, first_name, last_name, email, role, active) values ('gigi', 'FIRST_NAME_10', 'LAST_NAME_10', 'EMAIL_10', 'ROLE_10', true)
-INSERT INTO person(user_id, address, city, county, country) VALUES (1,'address','city','county','country')
+INSERT INTO zip_code(code) VALUES ('zip_1')
+INSERT INTO zip_code(code) VALUES ('zip_2')
+INSERT INTO address(city, country, county, zip_code_id) VALUES ('city_1','country','county', 1)
+INSERT INTO address(city, country, county, zip_code_id) VALUES ('city_2','country','county', 2)
+INSERT INTO person(user_id, address_id, address_zip) VALUES (1,1,'121212')
+INSERT INTO person(user_id, address_id, address_zip) VALUES (2,2,'167671212')
+INSERT INTO person(user_id, address_id, address_zip) VALUES (3,1,'12167672')
+
